@@ -35,8 +35,8 @@
   <code>npm install</code>
   <li>Create a <code>.env</code> file in the root directory and add the following environment variables:</li>
   <pre>
-PORT=3000
-MONGODB_URI=mongodb://localhost:27017/pinterest-clone
+PORT=3300
+MONGODB_URI=mongodb://127.0.0.1:27017/pinterest-clone
 SESSION_SECRET=your_session_secret
   </pre>
   <p>Replace <code>your_session_secret</code> with your preferred session secret.</p>
@@ -45,7 +45,7 @@ SESSION_SECRET=your_session_secret
 <ol>
   <li>Start the server:</li>
   <code>npm start</code>
-  <li>Visit <a href="http://localhost:3000">http://localhost:3000</a> in your web browser to access the application.</li>
+  <li>Visit <a href="http://127.0.0.1:3300">http://localhost:3300</a> in your web browser to access the application.</li>
 </ol>
 
 <h2 id="contributing">Contributing</h2>
