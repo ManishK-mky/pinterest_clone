@@ -1,0 +1,404 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;700&display=swap'); */
+* {
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+--red: #e60023;
+}
+
+body {
+/* display: grid;
+place-items: center; */
+background-color: rgb(255, 255, 255);
+/* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, "ＭＳ Ｐゴシック", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";; */
+}
+/* 
+.flex{
+display: flex;
+flex-wrap: wrap;
+gap:21px;
+flex-direction: column; */
+/* } */
+
+.container
+{
+padding-top: 6vh;
+width: 1400px;
+margin: auto;
+columns: 6;
+column-gap: 20px;
+
+}
+.container .box
+{
+width: 100%;
+margin-bottom: 10px;
+break-inside: avoid;
+border-radius: 15px;
+}
+.container .box img
+{
+max-width: 100%;
+min-width: 100%;
+border-radius: 10px;
+}
+
+
+img:hover {
+
+opacity: .95;
+box-shadow: 0 0 10px #222222;
+}
+
+.caption{
+color: #363636;
+font-family: Arial, Helvetica, sans-serif;
+padding: 2px;
+}
+
+@media (max-width: 1427px)
+{
+.container
+{
+columns: 5;
+width: calc(100% - 40px);
+}
+}
+@media (max-width: 1200px)
+{
+.container
+{
+columns: 4;
+}
+}
+
+@media (max-width: 1000px)
+{
+.container
+{
+columns: 3;
+}
+
+
+body{
+overflow-x: hidden;
+}
+
+.navLink{
+  position: absolute;
+  right: 0px;
+  height: 90vh;
+  top: 10vh;
+  background-color: #000; 
+  display: flex;
+  flex-direction: column;
+align-items: center;
+width: 30%;
+transform: translateX(100%);
+transition: transform 0.4s ease-in;
+opacity: 0.9;
+}
+
+.navLink li{
+opacity: 1;
+}
+
+.lines{
+display: block;
+}
+
+.nav-active{
+transform: translateX(0%);
+}
+
+@keyframes navLinkFade{
+from{
+  opacity: 0;
+  transform: translateX(50px);
+  }
+
+to{
+  opacity: 1;
+  transform: translateX(0px);
+  }
+}
+
+
+.toggle .l1{
+transform: rotate(-45deg) translate(-5px,6px);
+}
+
+.toggle .l2{
+opacity: 0;
+}
+
+.toggle .l3{
+transform: rotate(45deg) translate(-5px,-6px);
+}
+}
+
+
+
+@media (max-width: 786px)
+{
+.container
+{
+columns: 2;
+}
+}
+
+
+@media (max-width: 480px)
+{
+.container
+{
+columns: 1;
+}
+}
+
+input{
+text-decoration: none;
+border-radius: 9px;
+padding:3px 15px 3px 15px;
+border: none;
+}
+
+
+/* -----pins- */
+
+.pins {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+padding-top: 45px;
+padding-bottom: 21px;
+height: 1vh; /* Adjust the height as needed */
+/* Other styles for .pins if necessary */
+}
+
+.pins p {
+text-align: center;
+margin: 0; /* Remove default margin to avoid extra space */
+}
+
+.containerpers {
+  margin-top: 21px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardpers {
+  display: flex;
+  background-color: #fffddb;
+  border-radius: 33px;
+  padding: 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile-picture {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 20px;
+}
+
+.profile-picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.icon-overlayhai {
+  position: absolute;
+  bottom: 0;
+  left: 10;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 5px;
+  border-radius: 50%;
+}
+
+.icon {
+  font-size: 20px;
+  color: #333; /* Choose your desired color */
+}
+
+  .aise-hi{
+    padding-left: 60px;
+  }
+
+  .fol{
+    display: flex;
+  }
+  .name {
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  .username {
+    font-size: 18px;
+    color: #777;
+    margin: 10px 0;
+  }
+  
+  .tagline,
+  .description {
+    color: #555;
+    margin: 10px 0;
+  }
+  
+ /* Your existing styles for larger screens */
+.logout-button {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  padding: 10px;
+  background-color: #e60023;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 750px) {
+  .logout-button {
+    font-size: 0; /* Hide text */
+    padding: 10px; /* Adjust padding as needed */
+  }
+
+  .logout-button i {
+    font-size: 24px; /* Set your desired icon size */
+    margin-left: 5px; /* Adjust spacing as needed */
+  }
+}
+
+  .button:hover {
+    background-color: #0056b3;
+  }
+
+  ul {
+    list-style: none;
+  }
+  .stats {
+    /* background-color: #e60023; */
+    /* width: 50%; */
+    font-size: 15px;
+    display: flex;
+    /* justify-content: center; */
+    margin-bottom: 1rem;
+
+  }
+  .stats li {
+    min-width: 7rem;
+  }
+  .stats li h3 {
+    font-weight: 700;
+    font-size: .99rem;
+  }
+  .stats li h4 {
+    font-size: 15px;
+  }
+  
+  /* li{
+    font-weight: 500;
+
+  } */
+ 
+  .boxhai {
+    position: relative; /* Add relative positioning */
+    width: 40%;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 35px;
+    border: 2px solid #fff;
+    border-radius: 20px/50px;
+    background-clip: padding-box;
+    text-align: center;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); */
+  }
+  
+  .button {
+    font-size: 1em;
+    padding: 10px 20px;
+    color: #fff;
+    border: 2px solid #e60023;
+    border-radius: 50px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    background-color:#e60023;
+  }
+  .button:hover {
+    background-color: #e60023;
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .overlay:target {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .popup {
+    position: relative; /* Add relative positioning */
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    width: 40%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .popup h2 {
+    margin-top: 0;
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+    margin-bottom: 21px;
+  }
+  
+  .popup .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transition: all 200ms;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+  }
+  .popup .close:hover {
+    color: #e60023;
+  }
+  .popup .content {
+    max-height: 50vh;
+    overflow: auto;
+  }
+  
+  @media screen and (max-width: 700px) {
+    .box {
+      width: 70%;
+    }
+    .popup {
+      width: 70%;
+    }
+  }
+  
+  

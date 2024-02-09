@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Card</title>
+</head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&family=Poppins:wght@400;600&display=swap');
+
+*{
+    font-family: Poppins, sans-serif;
+    margin: 0px;
+}
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+}
+
+.username-container{
+  margin-top: 21px;
+    background-color: #e60023;
+    width: 600px;
+    display: flex;
+    border-radius: 20px;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+.profile-container{
+    display: flex;
+    gap: 0.5em;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile-description{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.profile-img {
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+}
+
+.profile-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.user-title{
+	padding-left:15px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.username {
+	padding-left:15px;
+    color: #4c4c55;
+}
+
+.menu-bar{
+    display: flex;
+    align-items: center;
+}
+
+.menu-bar{
+   
+  padding:3px 15px 3px 15px;
+/*     color: white; */
+}
+
+.menu-bar i:hover{
+    cursor: pointer;
+}
+
+button{
+	color: #4c4c55;
+    border: none;
+	font-size:20px;
+    border-radius:21px;
+    text-decoration: none;
+    padding:3px 15px 3px 15px;
+}
+</style>
+<body>
+   <div class="profile">
+    
+   </div>
+    <% alluser.forEach(function(user) { %>
+      <form action="/users/fol" method="post">
+        <div class="username-container">
+          <div class="profile-container">
+            <div class="profile-img">
+              <img src="https://e7.pngegg.com/pngimages/550/997/png-clipart-user-icon-foreigners-avatar-child-face.png" alt="Profile Picture">
+            </div>
+            <div class="profile-description">
+              <p class="user-title"><%= user.fullname %></p>
+              <p class="username">@<%= user.username %></p>
+            </div>
+          </div>
+          <div class="menu-bar">
+            <!-- Add the hidden input field to store the username -->
+            <input type="hidden" name="username" value="<%= user.username %>">
+            <button type="submit">Follow</button>
+          </div>
+        </div>
+      </form>
+    <% }) %>
+  </body>
+</html>

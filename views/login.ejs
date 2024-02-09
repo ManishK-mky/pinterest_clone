@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pinterest</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+
+  <style>
+    .container {
+    background-color: white;
+    min-width: 450px;
+    min-height: 480px;
+    position: absolute;
+    margin: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px -1px rgba(0, 0, 0, 0.5);
+    }
+
+    .upbtn{
+    text-decoration: none;
+    color:#000;
+    position: relative;
+    top: 80px;
+    left: 140px;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    width: 126px;
+    padding: 11px 20px;
+    background-color: rgb(241, 236, 236);
+    border-radius: 20px;
+    }
+
+    .pin{
+        text-decoration: none;
+    }
+
+    .error{
+        font-weight: 500;
+        color: red;
+        text-transform: capitalize;
+        margin: 7px 0;
+    }
+  </style> 
+  <body>
+    <div class="container">
+      <div class="content">
+        <!--pinterest logo-->
+        <img src="https://i.pinimg.com/originals/d3/d1/75/d3d175e560ae133f1ed5cd4ec173751a.png" alt="pin logo" class="img1" />
+        <p class="header">Login to see more</p>
+
+        <% if(error.length > 0){ %>
+            <p class="error"><%= error %></p>
+        <% } %>
+
+        <form action="/login" method="post">
+          <!-- <input type="email" name="email" placeholder="Email" class="detail" /><br /> -->
+          <input type="text" name="username" placeholder="Username" class="detail" /><br />
+          <!-- <input type="text" name="fullname" placeholder="Fullname" class="detail" /><br /> -->
+          <input type="password" name="password" placeholder="Password" class="detail" />
+          <input type="submit" class="btn int" value="Login My Account">
+        </form>
+
+        <a href="/#" class="pin">Forgot your password?</a>
+        <!-- <p class="or">OR</p>
+        <button class="btn fbk">
+          <i
+            class="fab fa-facebook fa-lg"
+            style="color: white; padding-right: 10px"
+          ></i
+          ><a href="#">Continue with Facebook</a></button
+        ><br />
+        <button class="btn ggl">
+          <i
+            class="fab fa-google"
+            style="color: rgb(11, 241, 22); padding-right: 10px"
+          ></i
+          ><a href="#">Continue with Google</a>
+        </button> -->
+
+        <footer>
+          <p>
+            By continuing, you agree to Pinterest's
+            <b>Terms of Service, Privacy policy.</b>
+          </p>
+          <hr />
+          <a href="/" class="pin">Not on Pinterest yet? Sign up</a>
+        </footer>
+      </div>
+    </div>
+    <a href="/index" class="upbtn">Sign up</a>
+
+  </body>
+</html>
